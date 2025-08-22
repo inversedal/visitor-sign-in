@@ -1,0 +1,32 @@
+{
+  "identityProvider": {
+    "enabled": false,
+    "provider": "oauth2",
+    "endpoints": {
+      "authorization": "https://auth.company.com/oauth/authorize",
+      "token": "https://auth.company.com/oauth/token",
+      "userInfo": "https://auth.company.com/oauth/userinfo"
+    },
+    "clientId": "visitor-management-app",
+    "redirectUri": "https://visitor-app.company.com/auth/callback",
+    "scopes": ["openid", "profile", "email"]
+  },
+  "email": {
+    "templates": {
+      "visitorArrival": {
+        "subject": "Visitor Arrival: {{visitorName}}",
+        "template": "visitor-arrival"
+      }
+    },
+    "hostEmailDomain": "company.com"
+  },
+  "badge": {
+    "companyName": "Your Company",
+    "address": "123 Business Ave, City, State 12345",
+    "logoUrl": "/assets/company-logo.png"
+  },
+  "audit": {
+    "retentionDays": 365,
+    "exportFormats": ["json", "csv"]
+  }
+}

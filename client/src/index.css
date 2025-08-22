@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(210 17% 98%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(209 78% 46%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 4% 26%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(210 17% 94%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(210 17% 94%);
+  --accent-foreground: hsl(209 78% 46%);
+  --destructive: hsl(4 90% 58%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(122 39% 49%);
+  --success-foreground: hsl(0 0% 100%);
+  --warning: hsl(36 100% 50%);
+  --warning-foreground: hsl(0 0% 100%);
+  --border: hsl(210 17% 91%);
+  --input: hsl(210 17% 97%);
+  --ring: hsl(209 78% 46%);
+  --radius: 0.75rem;
+  --font-inter: 'Inter', sans-serif;
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(210 17% 92%);
+  --card: hsl(210 4% 10%);
+  --card-foreground: hsl(210 17% 85%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(210 17% 92%);
+  --primary: hsl(209 78% 52%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 17% 95%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9%);
+  --muted-foreground: hsl(210 4% 46%);
+  --accent: hsl(210 4% 15%);
+  --accent-foreground: hsl(209 78% 52%);
+  --destructive: hsl(4 90% 58%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(122 39% 49%);
+  --success-foreground: hsl(0 0% 100%);
+  --warning: hsl(36 100% 50%);
+  --warning-foreground: hsl(0 0% 100%);
+  --border: hsl(210 4% 15%);
+  --input: hsl(210 4% 18%);
+  --ring: hsl(209 78% 52%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gray-50 text-foreground min-h-screen;
+    font-family: var(--font-inter);
+  }
+}
+
+@layer components {
+  .touch-target {
+    @apply min-h-[48px] min-w-[48px];
+  }
+  
+  .form-input-large {
+    @apply w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-3 text-lg font-medium text-white bg-primary rounded-lg hover:bg-blue-700 transition-colors duration-200 touch-target;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-3 text-lg font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors duration-200 touch-target;
+  }
+  
+  .btn-success {
+    @apply px-6 py-3 text-white bg-success rounded-lg hover:bg-green-600 transition-colors duration-200 touch-target;
+  }
+  
+  .btn-warning {
+    @apply px-6 py-3 text-white bg-warning rounded-lg hover:bg-yellow-600 transition-colors duration-200 touch-target;
+  }
+  
+  .btn-danger {
+    @apply px-6 py-3 text-white bg-destructive rounded-lg hover:bg-red-600 transition-colors duration-200 touch-target;
+  }
+}
